@@ -1,9 +1,11 @@
 const Action = (Model) => {
-    return (req, res, query) => {
+    return (req, res) => {
+        var query = {};
+
         Model.find(query, (err, data) => {
             if (err) return console.log('Error:', err);
 
-            res.status(200).send('METHOD DELETE');
+            res.status(200).send('METHOD RETRIEVE');
         });
     };
 };

@@ -6,8 +6,7 @@ const method = 'put';
 
 const ROUTER = function (action, Model) {
     return router[method](url, (req, res) => {
-        const query = {};
-        Model(req, res, query);
+        Model(req, res);
     });
 };
 

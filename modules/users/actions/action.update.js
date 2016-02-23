@@ -1,5 +1,7 @@
 const Action = (Model) => {
-    return (req, res, query, mod) => {
+    return (req, res) => {
+        const query = {};
+        const mod = {};
         Model.update(query, mod, (err, data) => {
             if (err) return console.log('Error:', err);
 

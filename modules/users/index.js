@@ -1,14 +1,10 @@
-const MODULE_NAME = 'users';
+const express = require('express');
+const router = express.Router();
 
+const MODULE_NAME = 'users';
 const ACTIONS = ['create', 'retrieve', 'update', 'delete'];
 const MODEL = require('./model')(ACTIONS);
-const ROUTERS = require('./router')(ACTIONS, MODEL);
+const _routes = require('./router')(ACTIONS, MODEL);
+const ROUTES = router.use('/api/' + MODULE_NAME, _routes);
 
-const MODULE = {
-    name: MODULE_NAME,
-    actions: ACTIONS,
-    model: MODEL,
-    routes: ROUTERS
-};
-
-module.exports = MODULE;
+module.exports = ROUTES;

@@ -1,5 +1,7 @@
 const Action = (Model) => {
-    return (req, res, query) => {
+    return (req, res) => {
+        var query = {};
+
         Model.remove(query, (err, data) => {
             if (err) return console.log('Error:', err);
 
