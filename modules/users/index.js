@@ -1,6 +1,3 @@
-const express = require('express');
-const router = express.Router();
-
 const MODULE_NAME = 'users';
 
 const ACTIONS = ['create', 'retrieve', 'update', 'delete'];
