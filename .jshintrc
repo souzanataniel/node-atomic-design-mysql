@@ -1,0 +1,3 @@
+{
+  "esnext": true // true = tells JSHint that your code uses ECMAScript 6 specific syntax
+}

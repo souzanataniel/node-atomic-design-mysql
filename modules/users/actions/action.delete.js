@@ -3,7 +3,7 @@ const Action = (Model) => {
         Model.remove(query, (err, data) => {
             if (err) return console.log('Error:', err);
 
-            console.log(data);
+            res.status(200).send('METHOD DELETE');
         });
     };
 };

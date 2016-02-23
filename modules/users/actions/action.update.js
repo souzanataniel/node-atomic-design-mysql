@@ -3,7 +3,7 @@ const Action = (Model) => {
         Model.update(query, mod, (err, data) => {
             if (err) return console.log('Error:', err);
 
-            console.log(data);
+            res.status(200).send('METHOD UPDATE');
         });
     };
 };
