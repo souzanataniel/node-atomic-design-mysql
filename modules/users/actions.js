@@ -1,6 +1,6 @@
 const routesPath = './routes/route';
 
-const ACTION = (Actions) => {
+const ACTIONS = (Actions) => {
     const ROUTES = [];
     Actions.forEach((action)=> {
         const route = require(routesPath + '.' + action + '.js');
@@ -9,4 +9,4 @@ const ACTION = (Actions) => {
     return ROUTES;
 };
 
-module.exports = ACTION;
+module.exports = ACTIONS;
