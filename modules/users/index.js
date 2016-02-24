@@ -7,7 +7,7 @@ const MODULE_ACTIONS = ['create', 'retrieve', 'update', 'delete', 'findById'];
 
 const ACTIONS = require('./actions')(MODULE_ACTIONS);
 const MODEL = require('./model')(ACTIONS);
-const _routes = require('./router')(ACTIONS, MODEL);
-const ROUTES = router.use('/api/' + MODULE_NAME, _routes);
+const ROUTES = require('./router')(ACTIONS, MODEL);
+const MODULE_ROUTES = router.use('/api/' + MODULE_NAME, ROUTES);
 
-module.exports = ROUTES;
+module.exports = MODULE_ROUTES;
