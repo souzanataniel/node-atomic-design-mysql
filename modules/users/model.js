@@ -9,7 +9,7 @@ const actionsPath = './actions/action';
 const MODEL = (ACTIONS) => {
     const CRUD = {};
     ACTIONS.forEach((action)=> {
-        CRUD[action] = require(actionsPath + '.' + action + '.js')(Model);
+        CRUD[action.name] = require(actionsPath + '.' + action.name + '.js')(Model);
     });
     return CRUD;
 };

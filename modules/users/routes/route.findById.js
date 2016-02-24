@@ -1,6 +1,6 @@
 const Route = {
-    name: 'retrieve',
-    url: '/',
+    name: 'findById',
+    url: '/:id',
     method: 'get'
 };
 

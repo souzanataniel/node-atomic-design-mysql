@@ -1,13 +1,7 @@
-const express = require('express');
-const router = express.Router();
-
-const url = '/';
-const method = 'delete';
-
-const ROUTER = function (action, Model) {
-    return router[method](url, (req, res) => {
-        Model(req, res);
-    });
+const Route = {
+    name: 'delete',
+    url: '/',
+    method: 'delete'
 };
 
-module.exports = ROUTER;
+module.exports = Route;
