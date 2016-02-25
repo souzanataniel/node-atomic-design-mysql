@@ -1,9 +1,13 @@
 require('./db/db.mongodb.js');
 
 const express = require('express');
+const bodyParser = require('body-parser');
+const userModule = require('./modules/users');
+
 const app = express();
 
-const userModule = require('./modules/users');
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
 app.use(userModule);
 

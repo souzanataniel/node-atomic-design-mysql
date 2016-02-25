@@ -1,5 +1,9 @@
 const queryBuild = (req, res)=> {
-    return {};
+    return {
+        login: req.body.login
+        , password: req.body.password
+        , email: req.body.email
+    };
 };
 
 const Action = (Model) => {
@@ -7,9 +11,13 @@ const Action = (Model) => {
         const query = queryBuild(req, res);
 
         Model.create(query, (err, data) => {
-            if (err) return console.log('Error:', err);
+            if (err) {
+                res.status(400).json({
+                    error: err.errmsg
+                });
+            }
 
-            res.status(200).send('METHOD CREATE');
+            res.status(200).send(data);
         });
     };
 };
