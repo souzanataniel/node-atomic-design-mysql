@@ -1,6 +1,11 @@
+const queryBuild = (req, res)=> {
+    return {};
+};
+
 const Action = (Model) => {
     return (req, res) => {
-        const query = {};
+        const query = queryBuild(req, res);
+
         Model.find(query, (err, data) => {
             if (err) return console.log('Error:', err);
 

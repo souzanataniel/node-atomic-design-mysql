@@ -1,7 +1,12 @@
+const queryBuild = (req, res)=> {
+    return {};
+};
+
 const Action = (Model) => {
     return (req, res) => {
-        const query = {};
-        const mod = {};
+        const query = queryBuild(req, res);
+        const mod = queryBuild(req, res);
+
         Model.update(query, mod, (err, data) => {
             if (err) return console.log('Error:', err);
 

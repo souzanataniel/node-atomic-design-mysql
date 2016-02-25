@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const _schema = new Schema({
     login: require('./fields/field-login')
-    , senha: require('./fields/field-password')
+    , password: require('./fields/field-password')
     , email: require('./fields/field-email')
     , created: require('./fields/field-created')
     , updated: require('./fields/field-updated')
