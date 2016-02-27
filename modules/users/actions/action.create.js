@@ -1,23 +1,12 @@
-const queryBuild = (req, res)=> {
-    return {
-        login: req.body.login
-        , password: req.body.password
-        , email: req.body.email
-    };
-};
-
 const Action = (Model) => {
     return (req, res) => {
-        const query = queryBuild(req, res);
+        const query = req.body;
 
         Model.create(query, (err, data) => {
-            if (err) {
-                res.status(400).json({
-                    error: err.errmsg
-                });
-            }
+            if (err) res.status(400).json(err);
 
-            res.status(200).send(data);
+
+            res.status(200).json(data);
         });
     };
 };

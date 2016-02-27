@@ -1,6 +1,6 @@
 const Route = {
     name: 'update',
-    url: '/',
+    url: '/:id',
     method: 'put'
 };
 

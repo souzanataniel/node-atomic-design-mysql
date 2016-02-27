@@ -1,6 +1,6 @@
 const Route = {
     name: 'delete',
-    url: '/',
+    url: '/:id',
     method: 'delete'
 };
 

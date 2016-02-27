@@ -1,15 +1,12 @@
-const queryBuild = (req, res)=> {
-    return {};
-};
-
 const Action = (Model) => {
     return (req, res) => {
-        const query = queryBuild(req, res);
+        const query = req.params.id;
 
-        Model.remove(query, (err, data) => {
-            if (err) return console.log('Error:', err);
+        Model.remove({_id: query}, (err, data) => {
+            if (err) res.status(400).json(err);
 
-            res.status(200).send('METHOD DELETE');
+
+            res.status(200).json(data);
         });
     };
 };

@@ -1,15 +1,11 @@
-const queryBuild = (req, res)=> {
-    return {};
-};
-
 const Action = (Model) => {
     return (req, res) => {
-        const query = queryBuild(req, res);
+        const query = req.params.id;
 
-        Model.find(query, (err, data) => {
-            if (err) return console.log('Error:', err);
+        Model.findById(query, (err, data) => {
+            if (err) res.status(400).json(err);
 
-            res.status(200).send('METHOD FIND BY ID');
+            res.status(200).json(data);
         });
     };
 };
