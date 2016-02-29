@@ -5,10 +5,8 @@ const Action = (Model) => {
         Model.create(query, (err, data) => {
             if (err) res.status(400).json(err);
 
-
             res.status(200).json(data);
         });
     };
 };
-
 module.exports = Action;

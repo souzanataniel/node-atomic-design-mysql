@@ -8,7 +8,7 @@ const userModule = require('./modules/users');
 
 const app = express();
 
-app.use(morgan('Date: :date[clf] | Method: :method | URL: :url | Status :status | Reponse Time: :response-time ms '));
+app.use(morgan('Date: :date[clf] | Method: :method | URL: :url | Status :status | Response Time: :response-time ms '));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
@@ -19,3 +19,7 @@ app.listen(3000, () => {
 });
 
 module.exports = app;
+
+//TODO #01 - Create pattern for API [Error Handler and Success].
+//TODO #02 - Create Tests for Base Module.
+//TODO #03 - Validate HTTP Method GET for Retrieve between Url Params

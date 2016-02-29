@@ -9,5 +9,4 @@ const Action = (Model) => {
         });
     };
 };
-
 module.exports = Action;

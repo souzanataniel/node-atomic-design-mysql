@@ -2,7 +2,7 @@ const DBConfig = {
     type: 'Document'
     , name: 'MongoDb'
     , host: 'mongodb://localhost/'
-    , database: 'test-fc'
+    , database: 'atomic-design'
     , port: 27017
 };
 
