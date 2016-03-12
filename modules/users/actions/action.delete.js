@@ -1,11 +1,14 @@
+const handlerError = require('./../../../handlerError');
+const handlerSuccess = require('./../../../handlerSuccess');
+
 const Action = (Model) => {
     return (req, res) => {
         const query = req.params.id;
 
         Model.remove({_id: query}, (err, data) => {
-            if (err) res.status(400).json(err);
+            if (err) return handlerError(res, err);
 
-            res.status(200).json(data);
+            return handlerSuccess(req, res, data, Model);
         });
     };
 };

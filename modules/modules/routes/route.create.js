@@ -1,6 +1,6 @@
 const Route = {
-    name: 'find',
-    url: '/find',
+    name: 'create',
+    url: '/',
     method: 'post'
 };
 

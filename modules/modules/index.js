@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const MODULE_NAME = 'users';
+const MODULE_NAME = 'modules';
 
 const MODULE_ACTIONS = [
     'create'
@@ -11,6 +11,7 @@ const MODULE_ACTIONS = [
     , 'count'
     , 'findById'
 ];
+
 
 const ACTIONS = require('./actions')(MODULE_ACTIONS);
 const MODEL = require('./model')(ACTIONS);
