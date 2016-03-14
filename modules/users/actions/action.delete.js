@@ -5,11 +5,8 @@ const Action = (Model) => {
     return (req, res) => {
         const query = req.params.id;
 
-        Model.remove({_id: query}, (err, data) => {
-            if (err) return handlerError(res, err);
+        res.send('Delete');
 
-            return handlerSuccess(req, res, data, Model);
-        });
     };
 };
 module.exports = Action;

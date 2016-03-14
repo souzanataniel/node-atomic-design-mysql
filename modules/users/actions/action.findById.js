@@ -5,12 +5,7 @@ const Action = (Model) => {
     return (req, res) => {
         const query = req.params.id;
 
-        Model.findById(query).deepPopulate('profile.modules.module').exec(function (err, data) {
-            if (err) return handlerError(res, err);
-
-            return handlerSuccess(req, res, data, Model);
-        });
-
+        res.send('Find By Id');
     };
 };
 module.exports = Action;

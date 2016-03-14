@@ -1,1 +1,1 @@
-# node-atomic-design
+# node-atomic-design-mysql
