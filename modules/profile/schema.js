@@ -9,6 +9,7 @@ const _schema = new Schema({
         , access: require('./fields/field-profile-boolean')
         , readOnly: require('./fields/field-profile-boolean')
     }]
+    , owner: require('./fields/field-owner')
     , created: require('./fields/field-created')
     , updated: require('./fields/field-updated')
 });

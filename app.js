@@ -10,6 +10,7 @@ const apiVersion = '/api/v' + 1;
 const userModule = require('./modules/users');
 const profileModule = require('./modules/profile');
 const modulesModule = require('./modules/modules');
+const customerModule = require('./modules/customers');
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use(bodyParser.json());
 app.use(apiVersion, userModule.routes);
 app.use(apiVersion, profileModule.routes);
 app.use(apiVersion, modulesModule.routes);
+app.use(apiVersion, customerModule.routes);
 
 app.listen(3000, () => {
     console.log("Live at Port 3000");

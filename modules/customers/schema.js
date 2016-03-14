@@ -4,10 +4,9 @@ const Schema = mongoose.Schema;
 const deepPopulate = require('mongoose-deep-populate')(mongoose);
 
 const _schema = new Schema({
-    login: require('./fields/field-login')
-    , password: require('./fields/field-password')
-    , email: require('./fields/field-email')
-    , profile: {type: Schema.Types.ObjectId, ref: 'profile', default: null}
+    name: require('./fields/field-name')
+    , users: [{type: Schema.Types.ObjectId, ref: 'user'}]
+    , customers: [{type: Schema.Types.ObjectId, ref: 'customer'}]
     , owner: require('./fields/field-owner')
     , created: require('./fields/field-created')
     , updated: require('./fields/field-updated')
